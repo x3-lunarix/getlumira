@@ -386,18 +386,23 @@ nav a:hover::after {
 }
 
 .trigon-image-container {
-  width: 100%;
-  max-width: 600px;
+  width: 100%; /* Take full width of its parent */
+  max-width: 600px; /* But don't exceed 600px on large screens */
+  max-height: 350px; /* Limit height to prevent overly tall images */
   border-radius: var(--border-radius);
-  overflow: hidden;
+  overflow: hidden; /* Crucial for containing the image */
   box-shadow: var(--card-shadow);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex; /* Use flex to center image if it doesn't fill */
+  justify-content: center;
+  align-items: center;
 }
 
 .trigon-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Always fill the container's width */
+  height: 100%; /* Always fill the container's height */
+  object-fit: contain; /* Scale down to fit, maintaining aspect ratio */
+  display: block; /* Remove any inline spacing issues */
 }
 
 /* The inner content of the trigon-section needs a background and padding */
