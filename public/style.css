@@ -363,13 +363,15 @@ nav a:hover::after {
 .trigon-inner-content {
   background: linear-gradient(145deg, var(--bg-light), var(--bg-lighter));
   border-radius: var(--border-radius);
-  padding: 60px 8%; /* Adjusted padding for the inner content */
+  padding: 80px 8%; /* Default padding for inner content */
   display: flex;
-  flex-direction: column; /* Default to column for mobile */
-  align-items: center;
+  flex-direction: row; /* Make row the default */
+  flex-wrap: wrap; /* Allow wrapping to column on small screens */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center horizontally if space allows */
   gap: 40px; /* Space between text and image */
-  box-shadow: var(--shadow); /* Apply shadow to the inner content */
-  height: 100%; /* Ensure it fills parent */
+  box-shadow: var(--shadow);
+  height: 100%;
   position: relative; /* For positioning tag */
 }
 
@@ -390,7 +392,7 @@ nav a:hover::after {
 
 .trigon-text-content {
   flex: 1; /* Allows text content to take available space */
-  text-align: center; /* Default for mobile */
+  text-align: left; /* Default to left alignment */
   max-width: 600px; /* Limit width for readability */
 }
 
@@ -414,7 +416,7 @@ nav a:hover::after {
 
 .trigon-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align buttons to start by default */
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -621,16 +623,12 @@ footer {
 
 /* Responsive styles */
 @media (min-width: 769px) {
-  .trigon-inner-content { /* Apply flex-direction row to the inner content */
-    flex-direction: row;
-    text-align: left;
-    padding: 80px 8%; /* Restore padding for the inner content */
-  }
+  /* No specific flex-direction change needed here as row is default */
   .trigon-text-content {
-      text-align: left; /* Align text to left on larger screens */
+      text-align: left; /* Ensure text is left-aligned on larger screens */
   }
   .trigon-buttons {
-      justify-content: flex-start; /* Align buttons to start */
+      justify-content: flex-start; /* Ensure buttons are left-aligned on larger screens */
   }
 }
 
@@ -688,13 +686,14 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   .trigon-inner-content {
+    flex-direction: column; /* Stack vertically on small screens */
     padding: 60px 5%; /* Adjust padding for inner div on smaller screens */
   }
-  .trigon-text-content h2 {
-    font-size: 2.2rem; /* Further adjustment for very small screens */
+  .trigon-text-content {
+    text-align: center; /* Center text on small screens */
   }
   .trigon-buttons {
-    flex-direction: column; /* Stack buttons vertically on small screens */
+    justify-content: center; /* Center buttons on small screens */
   }
 }
 
