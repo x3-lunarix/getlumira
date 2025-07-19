@@ -273,7 +273,7 @@ nav a:hover::after {
 }
 
 /* Adjust existing styles to work with the new animated border */
-.feature-card, .key-step, .trigon-section, .script-box {
+.feature-card, .key-step, .script-box { /* Removed .trigon-section here */
     /* Remove previous border and background styles that conflict */
     border: none;
     background: none;
@@ -351,44 +351,94 @@ nav a:hover::after {
   font-size: 0.95rem; /* Standard paragraph size */
 }
 
+/* Trigon Section Styling - Remade to match image 2 */
 .trigon-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 0; /* Remove padding from outer container */
   max-width: 1200px;
   margin: 0 auto 120px;
-  background: none; /* Remove background from outer container */
-  border: none; /* Remove border from outer container */
+  padding: 0; /* Animated border card handles outer padding */
+  background: none; /* Animated border card handles background */
+  border: none; /* Animated border card handles border */
 }
 
-.trigon-content {
-  text-align: center;
-  max-width: 700px;
+.trigon-inner-content {
+  background: linear-gradient(145deg, var(--bg-light), var(--bg-lighter));
+  border-radius: var(--border-radius);
+  padding: 60px 8%; /* Adjusted padding for the inner content */
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  align-items: center;
+  gap: 40px; /* Space between text and image */
+  box-shadow: var(--shadow); /* Apply shadow to the inner content */
+  height: 100%; /* Ensure it fills parent */
+  position: relative; /* For positioning tag */
 }
 
-.trigon-content h2 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+.trigon-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--bg-lighter); /* Darker tag background */
+    color: var(--text-secondary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.trigon-text-content {
+  flex: 1; /* Allows text content to take available space */
+  text-align: center; /* Default for mobile */
+  max-width: 600px; /* Limit width for readability */
+}
+
+.trigon-text-content h2 {
+  font-size: 3.2rem; /* Larger heading for impact */
+  margin-bottom: 15px;
   background: linear-gradient(90deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  line-height: 1.1;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
-.trigon-content p {
+.trigon-text-content p {
   font-size: 1.1rem;
   color: var(--text-secondary);
   margin-bottom: 30px;
 }
 
+.trigon-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-learn-more {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 14px 30px; /* Slightly smaller padding than download btn */
+    box-shadow: none; /* No shadow for this button */
+}
+
+.btn-learn-more:hover {
+    background-color: var(--primary-light);
+    color: var(--text);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.2);
+}
+
+
 .trigon-image-container {
   width: 100%; /* Take full width of its parent */
-  max-width: 600px; /* But don't exceed 600px on large screens */
-  max-height: 350px; /* Limit height to prevent overly tall images */
+  max-width: 650px; /* Increased max-width for the image container */
+  max-height: 400px; /* Adjusted max-height for better aspect ratio */
   border-radius: var(--border-radius);
   overflow: hidden; /* Crucial for containing the image */
   box-shadow: var(--card-shadow);
@@ -396,37 +446,16 @@ nav a:hover::after {
   display: flex; /* Use flex to center image if it doesn't fill */
   justify-content: center;
   align-items: center;
+  flex-shrink: 0; /* Prevent image container from shrinking */
 }
 
 .trigon-image {
   width: 100%; /* Always fill the container's width */
   height: 100%; /* Always fill the container's height */
-  object-fit: contain; /* Scale down to fit, maintaining aspect ratio */
+  object-fit: cover; /* Changed to cover to fill the container, might crop image */
   display: block; /* Remove any inline spacing issues */
 }
 
-/* The inner content of the trigon-section needs a background and padding */
-.trigon-section.animated-border-card > div {
-    background: linear-gradient(145deg, var(--bg-light), var(--bg-lighter));
-    border-radius: inherit;
-    padding: 80px 8%; /* Restore padding for the inner content */
-    height: 100%;
-    display: flex;
-    flex-direction: column; /* Default for mobile */
-    align-items: center;
-    gap: 40px; /* Restore gap */
-}
-
-/* Special handling for trigon-section layout on larger screens */
-@media (min-width: 769px) {
-  .trigon-section.animated-border-card > div {
-    flex-direction: row; /* Keep horizontal layout for inner content */
-    text-align: left;
-  }
-  .trigon-section.animated-border-card > div > .trigon-content {
-      text-align: left;
-  }
-}
 
 .script-container {
   max-width: 800px;
@@ -591,6 +620,20 @@ footer {
 }
 
 /* Responsive styles */
+@media (min-width: 769px) {
+  .trigon-inner-content { /* Apply flex-direction row to the inner content */
+    flex-direction: row;
+    text-align: left;
+    padding: 80px 8%; /* Restore padding for the inner content */
+  }
+  .trigon-text-content {
+      text-align: left; /* Align text to left on larger screens */
+  }
+  .trigon-buttons {
+      justify-content: flex-start; /* Align buttons to start */
+  }
+}
+
 @media (max-width: 992px) {
   .hero h1 {
     font-size: 3rem;
@@ -605,8 +648,8 @@ footer {
   .features-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-  .trigon-content h2 {
-    font-size: 2.5rem;
+  .trigon-text-content h2 { /* Adjusted for smaller screens */
+    font-size: 2.8rem;
   }
 }
 
@@ -644,11 +687,14 @@ footer {
   .features-grid, .key-steps {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  .trigon-section.animated-border-card > div {
+  .trigon-inner-content {
     padding: 60px 5%; /* Adjust padding for inner div on smaller screens */
   }
-  .trigon-content h2 {
-    font-size: 2rem;
+  .trigon-text-content h2 {
+    font-size: 2.2rem; /* Further adjustment for very small screens */
+  }
+  .trigon-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
   }
 }
 
@@ -682,5 +728,8 @@ footer {
   }
   .features-grid, .key-steps {
     grid-template-columns: 1fr; /* Single column on small screens */
+  }
+  .trigon-text-content h2 {
+    font-size: 1.8rem; /* Even smaller for tiny screens */
   }
 }
