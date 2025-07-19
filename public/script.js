@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(tempTextArea);
         // Select the text
         tempTextArea.select();
-        // Execute the copy command
-        document.execCommand('copy');
+        document.execCommand('copy'); // Use execCommand for broader compatibility in iframes
         // Remove the temporary textarea
         document.body.removeChild(tempTextArea);
 
