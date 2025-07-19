@@ -1,88 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumira Hub | Ultimate Roblox Script Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="assets/logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumira Hub - Premium Roblox script hub with advanced features">
+  <title>Lumira Hub | Premium Roblox Scripts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Link to external style.css -->
 </head>
 <body>
-    <div class="app-container">
-        <div class="sidebar">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Lumira Hub">
-                <span>Lumira Hub</span>
-            </div>
-            <nav class="main-nav">
-                <a href="#" class="nav-item active">
-                    <i class="fas fa-home"></i> Home
-                </a>
-            </nav>
-            <div class="sidebar-footer">
-                <button id="get-key-btn" class="btn primary">
-                    <i class="fas fa-key"></i> Get Key
-                </button>
-                <a href="#" class="btn discord-btn">
-                    <i class="fab fa-discord"></i> Join Discord
-                </a>
-            </div>
-        </div>
+  <!-- Animated background elements -->
+  <div class="bg-element bg-element-1"></div>
+  <div class="bg-element bg-element-2"></div>
 
-        <div class="main-content">
-            <div class="features-container">
-                <div class="features-grid" id="features-container"></div>
-            </div>
-
-            <div class="script-box">
-                <pre><code>loadstring(game:HttpGet("https://scripts.lumirahub.xyz"))()</code></pre>
-                <button class="copy-btn">
-                    <i class="fas fa-copy"></i> Copy
-                </button>
-            </div>
-
-            <div class="trigon-footer">
-                <p>Made by Trigon Staff</p>
-                <a href="https://trigonevo.com" class="btn primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Visit Trigon
-                </a>
-            </div>
-        </div>
+  <header>
+    <div class="logo">
+      <img src="./assets/logo.png" alt="Lumira Hub Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/0f172a/e2e8f0?text=L';">
+      Lumira Hub
     </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#key">Get Key</a>
+      <a href="#">Discord</a>
+    </nav>
+  </header>
 
-    <div class="popup-overlay" id="key-popup">
-        <div class="popup-content">
-            <div class="popup-header">
-                <h3>Get Key</h3>
-                <button class="close-popup">&times;</button>
-            </div>
-            <div class="popup-body">
-                <div class="key-option">
-                    <img src="assets/linkvertise.png" alt="Linkvertise">
-                    <span>Linkvertise</span>
-                </div>
-                <div class="key-option">
-                    <img src="assets/lootlabs.png" alt="Lootlabs">
-                    <span>Lootlabs</span>
-                </div>
-                <div class="key-option">
-                    <img src="assets/rinku.png" alt="Rinku.pro">
-                    <span>Rinku.pro</span>
-                </div>
-                <div class="key-option">
-                    <img src="assets/workink.png" alt="Work.Ink">
-                    <span>Work.Ink</span>
-                </div>
-                <div class="key-option">
-                    <img src="assets/trigon.png" alt="Trigon">
-                    <span>Trigon</span>
-                </div>
-            </div>
-        </div>
+  <section class="hero">
+    <h1>Premium Roblox Script Hub</h1>
+    <p>Access the most advanced and undetected Roblox scripts with our premium hub. Regular updates included.</p>
+    <div class="buttons">
+      <a href="#key" class="btn btn-download">
+        <i class="fas fa-key"></i> Get Key
+      </a>
+      <a href="#" class="btn btn-discord">
+        <i class="fab fa-discord"></i> Join Discord
+      </a>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="features" class="features-container">
+    <h2 class="section-title">Why Choose Lumira?</h2>
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h3>Daily Updates</h3>
+        <p>Scripts are updated daily to ensure compatibility with the latest Roblox patches and game updates.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <h3>10+ Supported Games</h3>
+        <p>Massive library of scripts for all popular Roblox games including Blox Fruits, King Legacy, and more.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Lightning Fast</h3>
+        <p>Optimized scripts with minimal resource usage for maximum performance during gameplay.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Dedicated support team available around the clock to help with any issues or questions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="key" class="key-container">
+    <h2 class="section-title">Get Your Key</h2>
+    <div class="key-steps">
+      <div class="key-step">
+        <div class="key-step-number">1</div>
+        <h3>Choose Provider</h3>
+        <p>Select from our trusted key providers to get started with Lumira Hub.</p>
+      </div>
+      
+      <div class="key-step">
+        <div class="key-step-number">2</div>
+        <h3>Complete Offer</h3>
+        <p>Follow the simple steps to verify your access to Lumira Hub.</p>
+      </div>
+      
+      <div class="key-step">
+        <div class="key-step-number">3</div>
+        <h3>Get Key</h3>
+        <p>Receive your activation key instantly after completing the offer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trigon-section">
+    <div class="trigon-content">
+      <h2>Introducing Trigon</h2>
+      <p>Trigon is the ultimate free Android optimization tool and Lua IDE. Experience unparalleled device performance while effortlessly scripting and debugging your Lua code in a user-friendly environment. Unlock new possibilities for both your device and your coding projects.</p>
+      <a href="https://trigonevo.com" target="_blank" class="btn btn-download">
+        <i class="fas fa-external-link-alt"></i> Visit Trigon
+      </a>
+    </div>
+    <div class="trigon-image-container">
+      <img src="./assets/trigon.png" alt="Trigon App Screenshot" class="trigon-image" onerror="this.onerror=null;this.src='https://placehold.co/600x350/1e293b/e2e8f0?text=Trigon+Image+Not+Found';">
+    </div>
+  </section>
+
+  <section class="script-container">
+    <h2 class="section-title">How To Use</h2>
+    <div class="script-box">
+      <div class="script-code">loadstring(game:HttpGet("https://scripts.lumira.xyz"))()</div>
+    </div>
+    <button class="copy-btn" id="copyBtn">
+      <i class="far fa-copy"></i> Copy Script
+    </button>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="./assets/logo.png" alt="Lumira Hub Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/0f172a/e2e8f0?text=L';">
+        Lumira Hub
+      </div>
+      <div class="footer-links">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#features"><i class="fas fa-star"></i> Features</a>
+        <a href="#key"><i class="fas fa-key"></i> Get Key</a>
+        <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="copyright">&copy; 2025 Lumira Hub</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script> <!-- Link to external script.js -->
 </body>
 </html>
