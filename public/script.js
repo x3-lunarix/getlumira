@@ -1,20 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navItems = document.querySelectorAll('.nav-item');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            navItems.forEach(nav => nav.classList.remove('active'));
-            tabContents.forEach(tab => tab.classList.remove('active'));
-            
-            this.classList.add('active');
-            
-            const tabId = this.getAttribute('data-tab') + '-tab';
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
+    const features = [
+        {
+            "icon": "magic",
+            "title": "Advanced Scripts",
+            "description": "Premium Roblox scripts with anti-ban protection",
+            "color": "#8B5CF6"
+        },
+        {
+            "icon": "fast",
+            "title": "Instant Updates",
+            "description": "Regular script updates to bypass detection",
+            "color": "#3B82F6"
+        },
+        {
+            "icon": "custom",
+            "title": "Custom Requests",
+            "description": "Get scripts tailored for your specific game",
+            "color": "#10B981"
+        }
+    ];
+
+    function renderFeatures() {
+        const container = document.getElementById('features-container');
+        container.innerHTML = features.map(feature => `
+            <div class="feature-card" style="--feature-color: ${feature.color}">
+                <div class="feature-icon">
+                    <i class="fas fa-${feature.icon}"></i>
+                </div>
+                <h3>${feature.title}</h3>
+                <p>${feature.description}</p>
+            </div>
+        `).join('');
+    }
+
+    renderFeatures();
 
     const getKeyBtn = document.getElementById('get-key-btn');
     const keyPopup = document.getElementById('key-popup');
@@ -46,14 +65,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
-    const keyOptions = document.querySelectorAll('.key-option');
-    keyOptions.forEach(option => {
-        option.addEventListener('click', function() {
-            keyOptions.forEach(opt => opt.classList.remove('active'));
-            this.classList.add('active');
-            const service = this.querySelector('span').textContent;
-            console.log(`Selected service: ${service}`);
-        });
-    });
 });
