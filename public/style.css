@@ -501,6 +501,12 @@ footer {
   display: inline-block;
 }
 
+.footer-logo img { /* Added specific styling for the footer logo image */
+  height: 60px; /* Increased height for better visibility in footer */
+  width: auto;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
 .footer-links {
   display: flex;
   justify-content: center;
