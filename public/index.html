@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumira Hub | Ultimate Roblox Script Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Lumira Hub">
+                <span>Lumira Hub</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="get-key-btn" class="btn primary">
+                    <i class="fas fa-key"></i> Get Key
+                </button>
+                <a href="#" class="btn discord-btn">
+                    <i class="fab fa-discord"></i> Join Discord
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="features-container">
+                <div class="features-grid" id="features-container"></div>
+            </div>
+
+            <div class="script-box">
+                <pre><code>loadstring(game:HttpGet("https://scripts.lumirahub.xyz"))()</code></pre>
+                <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+
+            <div class="trigon-footer">
+                <p>Made by Trigon Staff</p>
+                <a href="https://trigonevo.com" class="btn primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Visit Trigon
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="key-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Get Key</h3>
+                <button class="close-popup">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="key-option">
+                    <img src="assets/linkvertise.png" alt="Linkvertise">
+                    <span>Linkvertise</span>
+                </div>
+                <div class="key-option">
+                    <img src="assets/lootlabs.png" alt="Lootlabs">
+                    <span>Lootlabs</span>
+                </div>
+                <div class="key-option">
+                    <img src="assets/rinku.png" alt="Rinku.pro">
+                    <span>Rinku.pro</span>
+                </div>
+                <div class="key-option">
+                    <img src="assets/workink.png" alt="Work.Ink">
+                    <span>Work.Ink</span>
+                </div>
+                <div class="key-option">
+                    <img src="assets/trigon.png" alt="Trigon">
+                    <span>Trigon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
