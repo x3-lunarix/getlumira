@@ -356,9 +356,9 @@ nav a:hover::after {
 .trigon-section {
   max-width: 800px; /* Reduced max-width for the entire section to make it more compact */
   margin: 0 auto 120px;
-  padding: 0; /* Animated border card handles outer padding */
-  background: none; /* Animated border card handles background */
-  border: none; /* Animated border card handles border */
+  padding: 0; 
+  background: none; 
+  border: none; 
 }
 
 .trigon-inner-content {
@@ -366,8 +366,9 @@ nav a:hover::after {
   border-radius: var(--border-radius);
   padding: 50px 4%; /* Reduced padding for the inner content */
   display: flex;
-  flex-direction: column; /* Default to column: text/buttons on top, image on bottom */
-  align-items: center; /* Center horizontally */
+  flex-direction: row; /* Default to row: image on left, text/buttons on right */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center horizontally if space allows */
   gap: 30px; /* Space between text/buttons and image */
   box-shadow: var(--shadow);
   height: 100%;
@@ -391,8 +392,8 @@ nav a:hover::after {
 
 .trigon-text-content {
   flex: 1; /* Allows text content to take available space */
-  text-align: center; /* Center text */
-  max-width: 600px; /* Adjusted max-width for text content to allow more space */
+  text-align: left; /* Align text to left */
+  max-width: 400px; /* Adjusted max-width for text content to allow more space */
 }
 
 .trigon-text-content h2 {
@@ -412,7 +413,7 @@ nav a:hover::after {
 
 .trigon-buttons {
   display: flex;
-  justify-content: center; /* Center buttons */
+  justify-content: flex-start; /* Align buttons to start */
   gap: 15px; /* Reduced gap between buttons */
   flex-wrap: wrap;
 }
@@ -455,8 +456,8 @@ nav a:hover::after {
 
 .trigon-image-container {
   width: 100%; 
-  max-width: 500px; /* Adjusted max-width for the image container to be larger */
-  max-height: 300px; /* Adjusted max-height for better aspect ratio */
+  max-width: 300px; /* Further reduced max-width for the image container */
+  max-height: 200px; /* Further reduced max-height for better aspect ratio */
   border-radius: var(--border-radius);
   overflow: hidden; 
   box-shadow: var(--card-shadow);
@@ -761,12 +762,14 @@ footer {
 
 /* Responsive styles */
 @media (min-width: 769px) {
-  /* No specific flex-direction change needed here as row is default */
+  .trigon-inner-content {
+    flex-direction: row; /* Image on left, text on right */
+  }
   .trigon-text-content {
-      text-align: center; /* Ensure text is centered on larger screens */
+      text-align: left; /* Align text to left */
   }
   .trigon-buttons {
-      justify-content: center; /* Ensure buttons are centered on larger screens */
+      justify-content: flex-start; /* Align buttons to start */
   }
 }
 
