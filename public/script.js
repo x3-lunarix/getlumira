@@ -10,17 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to open the modal
     function openKeyModal() {
         keyModal.style.display = 'flex'; // Make it visible
+        // Use a slight delay to ensure display:flex takes effect before transition
         setTimeout(() => {
-            keyModal.classList.add('active'); // Trigger transition
-        }, 10); // Small delay to allow display change to register
+            keyModal.classList.add('active'); // Trigger transition (opacity and blur)
+        }, 10); 
     }
 
     // Function to close the modal
     function closeKeyModal() {
         keyModal.classList.remove('active'); // Trigger reverse transition
+        // Hide after transition completes
         setTimeout(() => {
-            keyModal.style.display = 'none'; // Hide after transition
-        }, 300); // Match CSS transition duration
+            keyModal.style.display = 'none'; 
+        }, 300); // Match CSS transition duration for opacity
     }
 
     // Event listeners for opening modal
