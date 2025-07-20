@@ -9,8 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> </head>
+  <link rel="stylesheet" href="style.css"> <!-- Link to external style.css -->
+</head>
 <body>
+  <!-- Animated background elements -->
   <div class="bg-element bg-element-1"></div>
   <div class="bg-element bg-element-2"></div>
 
@@ -119,10 +121,7 @@
 
   <section class="trigon-section animated-border-card">
     <div class="trigon-inner-content">
-      <div class="trigon-image-container">
-        <img src="./assets/trigon.png" alt="Trigon App Screenshot" class="trigon-image" onerror="this.onerror=null;this.src='https://placehold.co/600x350/1e293b/e2e8f0?text=Trigon+Image+Not+Found';">
-      </div>
-      
+      <!-- Text content on the left -->
       <div class="trigon-text-content">
         <span class="trigon-tag">Optimized and Refined</span>
         <h2>Download Trigon <br>for Android.</h2>
@@ -135,6 +134,10 @@
             Learn more
           </a>
         </div>
+      </div>
+      <!-- Image content on the right -->
+      <div class="trigon-image-container">
+        <img src="./assets/trigon.png" alt="Trigon App Screenshot" class="trigon-image" onerror="this.onerror=null;this.src='https://placehold.co/600x350/1e293b/e2e8f0?text=Trigon+Image+Not+Found';">
       </div>
     </div>
   </section>
@@ -170,6 +173,7 @@
     </div>
   </footer>
 
+  <!-- Key Modal Structure -->
   <div id="keyModal" class="modal">
     <div class="modal-content animated-border-card">
       <div>
@@ -187,5 +191,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script> </body>
+  <script src="script.js"></script> 
+</body>
 </html>
