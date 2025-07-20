@@ -352,13 +352,13 @@ nav a:hover::after {
   font-size: 0.95rem; /* Standard paragraph size */
 }
 
-/* Trigon Section Styling - Remade to match image 2 */
+/* Trigon Section Styling - Remade to match image_1bf83b.jpg */
 .trigon-section {
-  max-width: 900px; /* Further reduced max-width for the entire section */
+  max-width: 800px; /* Reduced max-width for the entire section to make it more compact */
   margin: 0 auto 120px;
-  padding: 0; 
-  background: none; 
-  border: none; 
+  padding: 0; /* Animated border card handles outer padding */
+  background: none; /* Animated border card handles background */
+  border: none; /* Animated border card handles border */
 }
 
 .trigon-inner-content {
@@ -366,11 +366,9 @@ nav a:hover::after {
   border-radius: var(--border-radius);
   padding: 50px 4%; /* Reduced padding for the inner content */
   display: flex;
-  flex-direction: row; /* Make row the default */
-  flex-wrap: wrap; /* Allow wrapping to column on small screens */
-  align-items: center; /* Vertically align items */
-  justify-content: center; /* Center horizontally if space allows */
-  gap: 30px; /* Reduced space between text and image */
+  flex-direction: column; /* Default to column: text/buttons on top, image on bottom */
+  align-items: center; /* Center horizontally */
+  gap: 30px; /* Space between text/buttons and image */
   box-shadow: var(--shadow);
   height: 100%;
   position: relative; /* For positioning tag */
@@ -393,39 +391,36 @@ nav a:hover::after {
 
 .trigon-text-content {
   flex: 1; /* Allows text content to take available space */
-  text-align: left; /* Default to left alignment */
-  max-width: 400px; /* Further reduced max-width for text content */
+  text-align: center; /* Center text */
+  max-width: 600px; /* Adjusted max-width for text content to allow more space */
 }
 
 .trigon-text-content h2 {
-  font-size: 2.5rem; /* Slightly smaller heading for better fit */
+  font-size: 2.8rem; /* Adjusted heading size for impact */
   margin-bottom: 15px;
-  background: var(--text); /* Solid text color for heading */
-  -webkit-background-clip: unset; 
-  background-clip: unset; 
-  color: var(--text); /* Set solid text color */
+  color: var(--text); /* Solid text color for heading */
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -1.5px;
 }
 
 .trigon-text-content p {
-  font-size: 0.95rem; /* Slightly smaller paragraph font size */
+  font-size: 1rem; /* Standard paragraph font size */
   color: var(--text-secondary);
   margin-bottom: 30px;
 }
 
 .trigon-buttons {
   display: flex;
-  justify-content: flex-start; /* Align buttons to start by default */
+  justify-content: center; /* Center buttons */
   gap: 15px; /* Reduced gap between buttons */
   flex-wrap: wrap;
 }
 
 /* Specific styling for Trigon section buttons */
 .trigon-buttons .btn {
-    padding: 10px 20px; /* Further smaller padding for these buttons */
-    font-size: 0.9rem; /* Further smaller font size */
+    padding: 12px 24px; /* Adjusted padding for these buttons */
+    font-size: 0.95rem; /* Adjusted font size */
     border-radius: 6px; 
     box-shadow: none; 
 }
@@ -445,7 +440,7 @@ nav a:hover::after {
     background-color: transparent;
     color: var(--text); 
     border: 2px solid var(--text-secondary); 
-    padding: 10px 20px;
+    padding: 12px 24px;
     box-shadow: none;
 }
 
@@ -460,8 +455,8 @@ nav a:hover::after {
 
 .trigon-image-container {
   width: 100%; 
-  max-width: 350px; /* Further reduced max-width for the image container */
-  max-height: 250px; /* Further reduced max-height for better aspect ratio */
+  max-width: 500px; /* Adjusted max-width for the image container to be larger */
+  max-height: 300px; /* Adjusted max-height for better aspect ratio */
   border-radius: var(--border-radius);
   overflow: hidden; 
   box-shadow: var(--card-shadow);
@@ -475,7 +470,7 @@ nav a:hover::after {
 .trigon-image {
   width: 100%; 
   height: 100%; 
-  object-fit: contain; 
+  object-fit: contain; /* Ensure the whole image/logo is visible */
   display: block; 
 }
 
@@ -768,10 +763,10 @@ footer {
 @media (min-width: 769px) {
   /* No specific flex-direction change needed here as row is default */
   .trigon-text-content {
-      text-align: left; /* Ensure text is left-aligned on larger screens */
+      text-align: center; /* Ensure text is centered on larger screens */
   }
   .trigon-buttons {
-      justify-content: flex-start; /* Ensure buttons are left-aligned on larger screens */
+      justify-content: center; /* Ensure buttons are centered on larger screens */
   }
 }
 
