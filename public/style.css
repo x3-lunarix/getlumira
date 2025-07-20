@@ -354,7 +354,7 @@ nav a:hover::after {
 
 /* Lumira PC Section Styling */
 .lumira-pc-section {
-  max-width: 900px; /* Consistent with other main sections */
+  max-width: 1000px; /* Wider section for better visual balance */
   margin: 0 auto 120px;
   padding: 0; 
   background: none; 
@@ -364,12 +364,12 @@ nav a:hover::after {
 .lumira-pc-inner-content {
   background: var(--bg-light); /* Solid background to match image */
   border-radius: var(--border-radius);
-  padding: 60px 5%; /* Increased padding for more breathing room */
+  padding: 70px 6%; /* Increased padding for more breathing room */
   display: flex;
-  flex-direction: row; /* Default to row: image on left, text/buttons on right */
+  flex-direction: row; /* Default to row: text on left, image on right */
   align-items: center; /* Vertically align items */
   justify-content: center; /* Center horizontally if space allows */
-  gap: 40px; /* Increased space between text/buttons and image */
+  gap: 50px; /* Increased space between text/buttons and image */
   box-shadow: var(--shadow);
   height: 100%;
   position: relative; /* For positioning tag */
@@ -377,28 +377,28 @@ nav a:hover::after {
 
 .lumira-pc-tag {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 25px; /* Adjusted position */
+    left: 25px; /* Adjusted position */
     background-color: var(--bg-lighter); /* Darker tag background */
     color: var(--text-secondary);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    padding: 8px 18px; /* Slightly larger padding */
+    border-radius: 25px; /* More rounded */
+    font-size: 0.9rem; /* Slightly larger font */
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    letter-spacing: 0.8px; /* More spacing */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Stronger shadow */
 }
 
 .lumira-pc-text-content {
   flex: 1; /* Allows text content to take available space */
   text-align: left; /* Align text to left */
-  max-width: 500px; /* Adjusted max-width for text content */
+  max-width: 550px; /* Adjusted max-width for text content */
 }
 
 .lumira-pc-text-content h2 {
-  font-size: 3.2rem; /* Larger heading for impact */
-  margin-bottom: 15px;
+  font-size: 3.5rem; /* Larger heading for impact */
+  margin-bottom: 18px; /* More space below heading */
   color: var(--text); /* Solid text color for heading */
   line-height: 1.1;
   font-weight: 700;
@@ -406,9 +406,9 @@ nav a:hover::after {
 }
 
 .lumira-pc-text-content p {
-  font-size: 1.1rem; /* Standard paragraph font size */
+  font-size: 1.15rem; /* Slightly larger paragraph font size */
   color: var(--text-secondary);
-  margin-bottom: 30px;
+  margin-bottom: 35px; /* More space below paragraph */
 }
 
 .lumira-pc-buttons {
@@ -419,10 +419,10 @@ nav a:hover::after {
 }
 
 .lumira-pc-buttons .btn {
-    padding: 14px 28px; /* Adjusted padding for these buttons */
-    font-size: 1rem; /* Adjusted font size */
+    padding: 16px 32px; /* Larger padding for these buttons */
+    font-size: 1.1rem; /* Larger font size */
     border-radius: 8px; /* Slightly more rounded */
-    box-shadow: none; 
+    box-shadow: var(--shadow); /* Add shadow */
 }
 
 .lumira-pc-buttons .btn-download {
@@ -432,14 +432,14 @@ nav a:hover::after {
 }
 
 .lumira-pc-buttons .btn-download:hover {
-    transform: translateY(-3px); 
-    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3); 
+    transform: translateY(-5px); /* Stronger hover effect */
+    box-shadow: 0 18px 36px rgba(99, 102, 241, 0.4); /* Stronger shadow */
 }
 
 .lumira-pc-image-container {
   width: 100%; 
-  max-width: 350px; /* Adjusted max-width for the image container */
-  max-height: 250px; /* Adjusted max-height for better aspect ratio */
+  max-width: 450px; /* Adjusted max-width for the image container */
+  max-height: 300px; /* Adjusted max-height for better aspect ratio */
   border-radius: var(--border-radius);
   overflow: hidden; 
   box-shadow: var(--card-shadow);
@@ -458,9 +458,64 @@ nav a:hover::after {
 }
 
 
-/* Trigon Section Styling - Remade to match image_19ab78.png */
+/* Script Container Styling */
+.script-container {
+  max-width: 900px; /* Wider container for script */
+  margin: 0 auto 120px; /* Added margin-bottom to separate from Trigon section */
+  padding: 0 8%;
+  text-align: center;
+}
+
+.script-box.animated-border-card > div {
+  background: var(--bg-light);
+  border-radius: inherit;
+  padding: 30px; /* Increased padding */
+  border: none; 
+  position: relative;
+  text-align: left;
+}
+
+.script-box .script-code {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text);
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 15px; /* Increased padding */
+  background: rgba(0, 0, 0, 0.3); /* Darker background for code */
+  border-radius: 6px; /* Slightly more rounded */
+  font-size: 1rem; /* Standard font size */
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  padding: 14px 28px; /* Adjusted padding */
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem; 
+  margin-top: 25px; /* Increased margin for spacing */
+  box-shadow: var(--shadow); /* Add shadow */
+}
+
+.copy-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.copy-btn.copied {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+
+/* Trigon Section Styling */
 .trigon-section {
-  max-width: 900px; /* Adjusted max-width for the entire section to be slightly wider */
+  max-width: 1000px; /* Wider section for better visual balance */
   margin: 0 auto 120px;
   padding: 0; 
   background: none; 
@@ -470,12 +525,12 @@ nav a:hover::after {
 .trigon-inner-content {
   background: var(--bg-light); /* Solid background to match image */
   border-radius: var(--border-radius);
-  padding: 60px 5%; /* Increased padding for more breathing room */
+  padding: 70px 6%; /* Increased padding for more breathing room */
   display: flex;
-  flex-direction: row; /* Default to row: image on left, text/buttons on right */
+  flex-direction: row; /* Default to row: text on left, image on right */
   align-items: center; /* Vertically align items */
   justify-content: center; /* Center horizontally if space allows */
-  gap: 40px; /* Increased space between text/buttons and image */
+  gap: 50px; /* Increased space between text/buttons and image */
   box-shadow: var(--shadow);
   height: 100%;
   position: relative; /* For positioning tag */
@@ -483,28 +538,28 @@ nav a:hover::after {
 
 .trigon-tag {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 25px; /* Adjusted position */
+    left: 25px; /* Adjusted position */
     background-color: var(--bg-lighter); /* Darker tag background */
     color: var(--text-secondary);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    padding: 8px 18px; /* Slightly larger padding */
+    border-radius: 25px; /* More rounded */
+    font-size: 0.9rem; /* Slightly larger font */
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    letter-spacing: 0.8px; /* More spacing */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Stronger shadow */
 }
 
 .trigon-text-content {
   flex: 1; /* Allows text content to take available space */
   text-align: left; /* Align text to left */
-  max-width: 500px; /* Adjusted max-width for text content */
+  max-width: 550px; /* Adjusted max-width for text content */
 }
 
 .trigon-text-content h2 {
-  font-size: 3.2rem; /* Larger heading for impact */
-  margin-bottom: 15px;
+  font-size: 3.5rem; /* Larger heading for impact */
+  margin-bottom: 18px; /* More space below heading */
   color: var(--text); /* Solid text color for heading */
   line-height: 1.1;
   font-weight: 700;
@@ -512,9 +567,9 @@ nav a:hover::after {
 }
 
 .trigon-text-content p {
-  font-size: 1.1rem; /* Standard paragraph font size */
+  font-size: 1.15rem; /* Slightly larger paragraph font size */
   color: var(--text-secondary);
-  margin-bottom: 30px;
+  margin-bottom: 35px; /* More space below paragraph */
 }
 
 .trigon-buttons {
@@ -526,10 +581,10 @@ nav a:hover::after {
 
 /* Specific styling for Trigon section buttons */
 .trigon-buttons .btn {
-    padding: 14px 28px; /* Adjusted padding for these buttons */
-    font-size: 1rem; /* Adjusted font size */
+    padding: 16px 32px; /* Larger padding for these buttons */
+    font-size: 1.1rem; /* Larger font size */
     border-radius: 8px; /* Slightly more rounded */
-    box-shadow: none; 
+    box-shadow: var(--shadow); /* Add shadow */
 }
 
 .trigon-buttons .btn-download {
@@ -539,22 +594,22 @@ nav a:hover::after {
 }
 
 .trigon-buttons .btn-download:hover {
-    transform: translateY(-3px); 
-    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3); 
+    transform: translateY(-5px); 
+    box-shadow: 0 18px 36px rgba(99, 102, 241, 0.4); 
 }
 
 .btn-learn-more {
     background-color: transparent;
     color: var(--text); 
     border: 2px solid var(--text-secondary); 
-    padding: 14px 28px;
+    padding: 16px 32px;
     box-shadow: none;
 }
 
 .btn-learn-more:hover {
     background-color: rgba(255, 255, 255, 0.1); 
     color: var(--text);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
     border-color: var(--text); 
 }
@@ -562,8 +617,8 @@ nav a:hover::after {
 
 .trigon-image-container {
   width: 100%; 
-  max-width: 250px; /* Adjusted max-width for the image container */
-  max-height: 180px; /* Adjusted max-height for better aspect ratio */
+  max-width: 450px; /* Adjusted max-width for the image container */
+  max-height: 300px; /* Adjusted max-height for better aspect ratio */
   border-radius: var(--border-radius);
   overflow: hidden; 
   box-shadow: var(--card-shadow);
@@ -854,10 +909,37 @@ footer {
   }
   .lumira-pc-text-content h2,
   .trigon-text-content h2 { 
-    font-size: 2.5rem; /* Adjusted for smaller screens */
+    font-size: 2.8rem; /* Adjusted for smaller screens */
   }
   .modal-content {
     max-width: 450px;
+  }
+  .lumira-pc-inner-content,
+  .trigon-inner-content {
+    padding: 50px 4%; /* Adjust padding for inner content */
+    gap: 30px; /* Adjust gap */
+  }
+  .lumira-pc-text-content,
+  .trigon-text-content {
+    max-width: 450px; /* Adjust max-width for text content */
+  }
+  .lumira-pc-text-content h2,
+  .trigon-text-content h2 {
+    font-size: 2.5rem; /* Further adjusted for smaller screens */
+  }
+  .lumira-pc-text-content p,
+  .trigon-text-content p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+  .lumira-pc-buttons .btn,
+  .trigon-buttons .btn {
+    padding: 14px 28px; /* Adjust button padding */
+    font-size: 1rem; /* Adjust button font size */
+  }
+  .lumira-pc-image-container,
+  .trigon-image-container {
+    max-width: 400px; /* Adjust image max-width */
+    max-height: 280px; /* Adjust image max-height */
   }
 }
 
