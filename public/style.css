@@ -352,56 +352,109 @@ nav a:hover::after {
   font-size: 0.95rem; /* Standard paragraph size */
 }
 
-/* Script Container Styling */
-.script-container {
-  max-width: 800px;
-  margin: 0 auto 80px; /* Added margin-bottom to separate from Trigon section */
-  padding: 0 8%;
-  text-align: center;
-}
-
-.script-box.animated-border-card > div {
-  background: var(--bg-light);
-  border-radius: inherit;
-  padding: 20px;
+/* Lumira PC Section Styling */
+.lumira-pc-section {
+  max-width: 900px; /* Consistent with other main sections */
+  margin: 0 auto 120px;
+  padding: 0; 
+  background: none; 
   border: none; 
-  position: relative;
-  text-align: left;
 }
 
-.script-box .script-code {
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text);
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.copy-btn {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  color: white;
-  border: none;
-  padding: 12px 24px; 
+.lumira-pc-inner-content {
+  background: var(--bg-light); /* Solid background to match image */
   border-radius: var(--border-radius);
-  cursor: pointer;
-  font-weight: 600;
-  transition: var(--transition);
-  display: inline-flex;
+  padding: 60px 5%; /* Increased padding for more breathing room */
+  display: flex;
+  flex-direction: row; /* Default to row: image on left, text/buttons on right */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center horizontally if space allows */
+  gap: 40px; /* Increased space between text/buttons and image */
+  box-shadow: var(--shadow);
+  height: 100%;
+  position: relative; /* For positioning tag */
+}
+
+.lumira-pc-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--bg-lighter); /* Darker tag background */
+    color: var(--text-secondary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.lumira-pc-text-content {
+  flex: 1; /* Allows text content to take available space */
+  text-align: left; /* Align text to left */
+  max-width: 500px; /* Adjusted max-width for text content */
+}
+
+.lumira-pc-text-content h2 {
+  font-size: 3.2rem; /* Larger heading for impact */
+  margin-bottom: 15px;
+  color: var(--text); /* Solid text color for heading */
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.lumira-pc-text-content p {
+  font-size: 1.1rem; /* Standard paragraph font size */
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.lumira-pc-buttons {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to start */
+  gap: 20px; /* Increased gap between buttons */
+  flex-wrap: wrap;
+}
+
+.lumira-pc-buttons .btn {
+    padding: 14px 28px; /* Adjusted padding for these buttons */
+    font-size: 1rem; /* Adjusted font size */
+    border-radius: 8px; /* Slightly more rounded */
+    box-shadow: none; 
+}
+
+.lumira-pc-buttons .btn-download {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+}
+
+.lumira-pc-buttons .btn-download:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3); 
+}
+
+.lumira-pc-image-container {
+  width: 100%; 
+  max-width: 350px; /* Adjusted max-width for the image container */
+  max-height: 250px; /* Adjusted max-height for better aspect ratio */
+  border-radius: var(--border-radius);
+  overflow: hidden; 
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex; 
+  justify-content: center;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem; 
-  margin-top: 20px; /* Added margin for spacing */
+  flex-shrink: 0; 
 }
 
-.copy-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-}
-
-.copy-btn.copied {
-  background: linear-gradient(135deg, #10b981, #059669);
+.lumira-pc-image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; /* Ensure the whole image/logo is visible */
+  display: block; 
 }
 
 
@@ -509,8 +562,8 @@ nav a:hover::after {
 
 .trigon-image-container {
   width: 100%; 
-  max-width: 250px; /* Further reduced max-width for the image container */
-  max-height: 180px; /* Further reduced max-height for better aspect ratio */
+  max-width: 250px; /* Adjusted max-width for the image container */
+  max-height: 180px; /* Adjusted max-height for better aspect ratio */
   border-radius: var(--border-radius);
   overflow: hidden; 
   box-shadow: var(--card-shadow);
@@ -764,6 +817,16 @@ footer {
 
 /* Responsive styles */
 @media (min-width: 769px) {
+  .lumira-pc-inner-content {
+    flex-direction: row; /* Image on left, text on right */
+  }
+  .lumira-pc-text-content {
+      text-align: left; /* Align text to left */
+  }
+  .lumira-pc-buttons {
+      justify-content: flex-start; /* Align buttons to start */
+  }
+
   .trigon-inner-content {
     flex-direction: row; /* Image on left, text on right */
   }
@@ -789,6 +852,7 @@ footer {
   .features-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
+  .lumira-pc-text-content h2,
   .trigon-text-content h2 { 
     font-size: 2.5rem; /* Adjusted for smaller screens */
   }
@@ -831,16 +895,20 @@ footer {
   .features-grid, .key-steps {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+  .lumira-pc-inner-content,
   .trigon-inner-content {
     flex-direction: column; /* Stack vertically on small screens */
     padding: 40px 5%; /* Further reduced padding for inner div on smaller screens */
   }
+  .lumira-pc-text-content,
   .trigon-text-content {
     text-align: center; /* Center text on small screens */
   }
+  .lumira-pc-buttons,
   .trigon-buttons {
     justify-content: center; /* Center buttons on small screens */
   }
+  .lumira-pc-image-container,
   .trigon-image-container {
     max-width: 100%; /* Allow image to take full width on small screens */
     max-height: 250px; /* Adjusted max-height for mobile */
@@ -888,12 +956,15 @@ footer {
   .features-grid, .key-steps {
     grid-template-columns: 1fr; /* Single column on small screens */
   }
+  .lumira-pc-text-content h2,
   .trigon-text-content h2 {
     font-size: 1.8rem; /* Even smaller for tiny screens */
   }
+  .lumira-pc-buttons,
   .trigon-buttons {
     flex-direction: column; /* Ensure buttons stack on very small screens */
   }
+  .lumira-pc-buttons .btn,
   .trigon-buttons .btn {
     width: 100%; /* Full width buttons on very small screens */
   }
