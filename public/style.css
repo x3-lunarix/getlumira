@@ -399,10 +399,10 @@ nav a:hover::after {
 .trigon-text-content h2 {
   font-size: 3.2rem; /* Larger heading for impact */
   margin-bottom: 15px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  background: var(--text); /* Solid text color for heading */
+  -webkit-background-clip: unset; /* Remove gradient clip */
+  background-clip: unset; /* Remove gradient clip */
+  color: var(--text); /* Set solid text color */
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -1.5px;
@@ -421,19 +421,39 @@ nav a:hover::after {
   flex-wrap: wrap;
 }
 
+/* Specific styling for Trigon section buttons */
+.trigon-buttons .btn {
+    padding: 14px 28px; /* Slightly smaller padding for these buttons */
+    font-size: 1rem; /* Slightly smaller font size */
+    border-radius: 6px; /* Slightly less rounded */
+    box-shadow: none; /* Remove default shadow */
+}
+
+.trigon-buttons .btn-download {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+}
+
+.trigon-buttons .btn-download:hover {
+    transform: translateY(-3px); /* Smaller lift on hover */
+    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3); /* Lighter shadow */
+}
+
 .btn-learn-more {
     background-color: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    padding: 14px 30px; /* Slightly smaller padding than download btn */
-    box-shadow: none; /* No shadow for this button */
+    color: var(--text); /* Text color for learn more button */
+    border: 2px solid var(--text-secondary); /* Border color matching secondary text */
+    padding: 14px 28px;
+    box-shadow: none;
 }
 
 .btn-learn-more:hover {
-    background-color: var(--primary-light);
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
     color: var(--text);
     transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+    border-color: var(--text); /* Border color changes on hover */
 }
 
 
@@ -454,7 +474,7 @@ nav a:hover::after {
 .trigon-image {
   width: 100%; /* Always fill the container's width */
   height: 100%; /* Always fill the container's height */
-  object-fit: cover; /* Changed to cover to fill the container, might crop image */
+  object-fit: contain; /* Changed to contain to prevent cropping the UI */
   display: block; /* Remove any inline spacing issues */
 }
 
