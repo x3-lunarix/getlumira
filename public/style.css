@@ -665,6 +665,8 @@ footer {
 .modal.active {
   opacity: 1;
   pointer-events: auto;
+  backdrop-filter: blur(8px); /* Apply blur when active */
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .modal-content {
@@ -830,7 +832,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   .trigon-inner-content {
-    flex-direction: column; /* Stack vertically on small screens */
+    flex-direction: column-reverse; /* Stack vertically on small screens, image on top */
     padding: 40px 5%; /* Further reduced padding for inner div on smaller screens */
   }
   .trigon-text-content {
