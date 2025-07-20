@@ -9,10 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> <!-- Link to external style.css -->
-</head>
+  <link rel="stylesheet" href="style.css"> </head>
 <body>
-  <!-- Animated background elements -->
   <div class="bg-element bg-element-1"></div>
   <div class="bg-element bg-element-2"></div>
 
@@ -32,7 +30,7 @@
     <h1>Premium Roblox Script Hub</h1>
     <p>Access the most advanced and undetected Roblox scripts with our premium hub. Regular updates included.</p>
     <div class="buttons">
-      <a href="#key" class="btn btn-download">
+      <a href="#key" class="btn btn-download" id="getKeyButtonHero">
         <i class="fas fa-key"></i> Get Key
       </a>
       <a href="#" class="btn btn-discord">
@@ -111,6 +109,9 @@
           <div class="key-step-number">3</div>
           <h3>Get Key</h3>
           <p>Receive your activation key instantly after completing the offer.</p>
+          <button class="btn btn-download get-key-button" id="getKeyButtonSection">
+            <i class="fas fa-key"></i> Get My Key
+          </button>
         </div>
       </div>
     </div>
@@ -118,12 +119,10 @@
 
   <section class="trigon-section animated-border-card">
     <div class="trigon-inner-content">
-      <!-- Image content on the right -->
       <div class="trigon-image-container">
         <img src="./assets/trigon.png" alt="Trigon App Screenshot" class="trigon-image" onerror="this.onerror=null;this.src='https://placehold.co/600x350/1e293b/e2e8f0?text=Trigon+Image+Not+Found';">
       </div>
       
-      <!-- Text content on the left -->
       <div class="trigon-text-content">
         <span class="trigon-tag">Optimized and Refined</span>
         <h2>Download Trigon <br>for Android.</h2>
@@ -147,7 +146,7 @@
         <div class="script-code">loadstring(game:HttpGet("https://scripts.lumira.xyz"))()</div>
       </div>
     </div>
-    <button class="copy-btn" id="copyBtn">
+    <button class="copy-btn" id="copyScriptBtn">
       <i class="far fa-copy"></i> Copy Script
     </button>
   </section>
@@ -171,6 +170,22 @@
     </div>
   </footer>
 
-  <script src="script.js"></script> <!-- Link to external script.js -->
-</body>
+  <div id="keyModal" class="modal">
+    <div class="modal-content animated-border-card">
+      <div>
+        <span class="close-button">&times;</span>
+        <h2>Your Premium Access Key</h2>
+        <p>Use this key to unlock all premium features:</p>
+        <div class="key-display">
+          <input type="text" id="premiumKey" value="lumira-key-premiumaccess-5216wav22" readonly>
+          <button class="copy-btn" id="copyKeyBtn">
+            <i class="far fa-copy"></i> Copy Key
+          </button>
+        </div>
+        <p class="modal-note">Please keep your key safe. Do not share it with others.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> </body>
 </html>
